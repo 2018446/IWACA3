@@ -103,8 +103,8 @@
                 Total: €
                 <input type="text" name="txtBillAmt" /><input type="checkbox" name="cbOpts" value="isVeg" id="showVeg" /><label for="showVeg">Highlight Vegetarian Meals</label></p>
                 </form>
-                
-                
+
+
                 <script>
 				<![CDATA[
 					var gEntreeCount = 0;
@@ -113,10 +113,8 @@
 					function calculateBill(idMenuTable) {
 						var fBillTotal = 0.0;
 						var i=0;
-
 															// find the table tag
 						var oTable = document.getElementById(idMenuTable);
-
 															// go through the table and add up the prices of all
 															// the selected items. The code takes advantage of the 
 															// fact that each checkbox has a corresponding row in
@@ -137,7 +135,6 @@
 															// return the price as a decimal number with 2 decimal places
 						return Math.round(fBillTotal*100.0)/100.0;
 					};
-
 															// This function either turns on or off the row highlighting for vegetarian
 															// items (depending on the value of bShowVeg)
 					function highlightVegetarian(idTable, bShowVeg) {
@@ -145,7 +142,6 @@
 															//	meals, otherwise we're unhighlighting them.
 						var i=0;
 						var oTable = document.getElementById(idTable);
-
 						var oTBODY = oTable.getElementsByTagName('TBODY')[0];
 						var aTRs = oTBODY.getElementsByTagName('TR');
 																// walk through each of the table rows and see if it has a 
@@ -160,7 +156,6 @@
 							};
 						};
 					};
-
 																// Utility function for getting the parent tag of a given tag
 																// but only of a certain type (i.e. a TR, a TABLE, etc.)
 					function getParentTag(oNode, sParentType) {
@@ -187,8 +182,8 @@
 			        });
 			]]>
 			</script>
-                
+
             </body>
         </html>
     </xsl:template>
-</xsl:transform>
+</xsl:transform> 
